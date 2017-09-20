@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
+    <title>
+        
+        centos7安装KVM（vnc管理） · CNOSX
+        
+    </title>
+    <link rel="icon" href= >
+    <!-- 提前加载place holder  -->
+    <style>
+        @font-face {
+            font-family: 'Oswald-Regular';
+            src: url('/font/Oswald-Regular.ttf');
+        }
+        @font-face {
+            font-family: 'Source Sans Pro';
+            src: url('/font/Source Sans Pro.woff'),
+            url('/font/Source Sans Pro.woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        @font-face {
+            font-family: 'Source Code Pro';
+            src: url('/font/SourceCodePro-Regular.ttf.woff'),
+            url('/font/SourceCodePro-Regular.ttf.woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+        
+        
+        .site-intro-placeholder {
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: 0px;
+        width: calc(100% + 300px);
+        height: 100%;
+        background: repeating-linear-gradient(-45deg, #444 0, #444 80px, #333 80px, #333 160px);
+        background-position: center center;
+        transform: translate3d(-226px, 0, 0);
+        animation: gradient-move 2s ease-out 0s 1;
+        }
+        @keyframes gradient-move {
+        0% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        99% {
+            transform: translate3d(0, 0, 0);
+        }
+        99.1% {
+            transform: translate3d(-226px, 0, 0);
+        }
+        100% {
+            transform: translate3d(-226px, 0, 0);
+        }
+    }
+    </style>
+    <link rel="stylesheet" href = "/css/style.css?v=20170912" />
+    <script src="//cdn.staticfile.org/jquery/3.2.1/jquery.min.js" defer></script>
+    
+    <script src="/scripts/main.js" defer></script>
+    <!-- 百度统计  -->
+    
+    <!-- 谷歌统计  -->
+    
+</head>
+
+    
+        <body class="post-body">
+    
+    
+<header class="header">
+
+    <div class="header-sidebar-menu">&#xe775;</div>
+    <!-- post页的toggle banner  -->
+    
+    <div class="banner">
+            <div class="blog-title">
+                <a href="/" >CNOSX</a>
+            </div>
+            <div class="post-title">
+                <a href="#" class="post-name">centos7安装KVM（vnc管理）</a>
+            </div>
+    </div>
+    
+    <a class="home-link" href=/>CNOSX</a>
+</header>
+    <div class="wrapper">
+        <div class="site-intro">
+    
+    <!-- 主页  -->
+    
+    
+    <!-- 404页  -->
+            
+    <div class="site-intro-img" style="background-image: url(http://desk.fd.zol-img.com.cn/t_s1920x1080c5/g5/M00/0C/06/ChMkJlcMmsiITLfvAAUV18fF144AAPwQwKSq2kABRXv305.jpg)"></div>
+    <div class="site-intro-placeholder"></div>
+    <div class="site-intro-meta">
+        <!-- 标题  -->
+        <h1 class="intro-title">
+            <!-- 主页  -->
+            
+            centos7安装KVM（vnc管理）
+            <!-- 404 -->
+            
+        </h1>
+        <!-- 副标题 -->
+        <p class="intro-subtitle">
+            <!-- 主页副标题  -->
+            
+            
+        </p>
+        <!-- 404 -->
+        
+        <!-- 文章页meta -->
+        
+            <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = CENTOS>CENTOS</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = VNC>VNC</a>
+    
+        <a class="post-tag" href="javascript:void(0);" data-href = KVM>KVM</a>
+    
+</div>
+
+            
+            <div class="post-intro-meta">
+                <span class="post-intro-calander iconfont-archer">&#xe676;</span>
+                <span class="post-intro-time">2017/09/19</span>
+            </div>
+        
+    </div>
+</div>
+        <div class="container">
+            <main class="main post-page">
+    <article class="article-entry">
+        <h2 id="1-centos7最小化安装"><a href="#1-centos7最小化安装" class="headerlink" title="1. centos7最小化安装"></a>1. centos7最小化安装</h2><p><a href="http://www.cnosx.com/2017/09/06/centos7最小化安装/">http://www.cnosx.com/2017/09/06/centos7最小化安装/</a></p>
+<h2 id="2-安装图形界面及管理工具"><a href="#2-安装图形界面及管理工具" class="headerlink" title="2. 安装图形界面及管理工具"></a>2. 安装图形界面及管理工具</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#安装图形界面</div><div class="line">yum -y groupinstall &quot;GNOME Desktop&quot; &quot;Graphical Administration Tools&quot;</div><div class="line">#开机进入图形界面</div><div class="line">ln -sf /lib/systemd/system/runlevel5.target /etc/systemd/system/default.target</div><div class="line">#重启</div><div class="line">reboot</div></pre></td></tr></table></figure>
+<h2 id="3-安装tigervnc"><a href="#3-安装tigervnc" class="headerlink" title="3. 安装tigervnc"></a>3. 安装tigervnc</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#安装tigervnc</div><div class="line">yum -y install tigervnc*</div><div class="line">#复制vncserver服务文件</div><div class="line">cp /lib/systemd/system/vncserver@.service /lib/systemd/system/vncserver@:4.service</div><div class="line">#编辑文件</div><div class="line">vim /lib/systemd/system/vncserver@:4.service</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">#vncserver@:4.service内容</div><div class="line">[Unit]</div><div class="line">Description=Remote desktop service (VNC)</div><div class="line">After=syslog.target network.target</div><div class="line"></div><div class="line">[Service]</div><div class="line">Type=forking</div><div class="line"># Clean any existing files in /tmp/.X11-unix environment</div><div class="line">ExecStartPre=/bin/sh -c &apos;/usr/bin/vncserver -kill :4 &gt; /dev/null 2&gt;&amp;1 || :&apos;</div><div class="line">ExecStart=/sbin/runuser -l root -c &quot;/usr/bin/vncserver :4&quot;</div><div class="line">PIDFile=/root/.vnc/%H%i.pid</div><div class="line">ExecStop=/bin/sh -c &apos;/usr/bin/vncserver -kill :4 &gt; /dev/null 2&gt;&amp;1 || :&apos;</div><div class="line"></div><div class="line">[Install]</div><div class="line">WantedBy=multi-user.target</div></pre></td></tr></table></figure>
+<h2 id="4-设置开机启动vncserver-4-service"><a href="#4-设置开机启动vncserver-4-service" class="headerlink" title="4. 设置开机启动vncserver@:4.service"></a>4. 设置开机启动vncserver@:4.service</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">#启动</div><div class="line">systemctl start vncserver@:4.service</div><div class="line">#开机启动</div><div class="line">systemctl enable vncserver@:4.service</div><div class="line">#查看启动状态</div><div class="line">systemctl status vncserver@:4.service</div><div class="line">#停止</div><div class="line">systemctl stop vncserver@:4.service</div><div class="line">#取消开机启动</div><div class="line">systemctl disable vncserver@:4.service</div><div class="line">#更新systemctl，使刚才的修改生效</div><div class="line">systemctl daemon-reload</div></pre></td></tr></table></figure>
+<h2 id="5-关闭selinux"><a href="#5-关闭selinux" class="headerlink" title="5. 关闭selinux"></a>5. 关闭selinux</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#临时关闭</div><div class="line">setenforce 0</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#编辑selinx</div><div class="line">vim /etc/sysconfig/selinux</div></pre></td></tr></table></figure>
+<p>将<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELINUX=enforcing</div></pre></td></tr></table></figure></p>
+<p>修改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELINUX=disabled</div></pre></td></tr></table></figure></p>
+<h2 id="6-防火墙放行端口"><a href="#6-防火墙放行端口" class="headerlink" title="6. 防火墙放行端口"></a>6. 防火墙放行端口</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">#放行5900-5903端口</div><div class="line">firewall-cmd --permanent --add-service vnc-server</div><div class="line">#放行5904-5910端口</div><div class="line">firewall-cmd --add-port=5904:5910/tcp --permanent</div><div class="line">#删除放行5900-5903端口</div><div class="line">firewall-cmd --permanent --remove-service vnc-server</div><div class="line">#重启防火墙</div><div class="line">systemctl restart firewalld.service</div><div class="line">#查看防火墙配置</div><div class="line">iptables -L -n</div></pre></td></tr></table></figure>
+<h2 id="7-安装KVM所需软件"><a href="#7-安装KVM所需软件" class="headerlink" title="7. 安装KVM所需软件"></a>7. 安装KVM所需软件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#安装KVM所需软件</div><div class="line">yum -y install kvm kmod-kvm kvm-qemu-img libvirt Python-virtinst virt-manager virt-top virt-viewer libvirt-client qemu-kvm bridge-utils virt-install</div><div class="line">#查看KVM是否启动</div><div class="line">lsmod | grep kvm</div></pre></td></tr></table></figure>
+<h2 id="8-配置网络"><a href="#8-配置网络" class="headerlink" title="8. 配置网络"></a>8. 配置网络</h2><p>配置br0虚拟网卡<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#新建br0</div><div class="line">vim /etc/sysconfig/network-scripts/ifcfg-br0</div></pre></td></tr></table></figure></p>
+<p>DHCP获取IP（二选一）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">DEVICE=br0</div><div class="line">TYPE=Bridge</div><div class="line">ONBOOT=yes</div><div class="line">NM_CONTROLLED=no</div><div class="line">BOOTPROTO=dhcp</div></pre></td></tr></table></figure></p>
+<p>手动配置ip（二选一）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">BOOTPROTO=static</div><div class="line">DEVICE=br0</div><div class="line">TYPE=Bridge</div><div class="line">NM_CONTROLLED=no</div><div class="line">IPADDR=192.168.1.2</div><div class="line">NETMASK=255.255.255.0</div><div class="line">GATEWAY=192.168.1.1</div><div class="line">DNS1=223.5.5.5</div><div class="line">DNS2=223.6.6.6</div></pre></td></tr></table></figure></p>
+<p>桥接物理网卡至br0<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#编辑物理网卡enp3s0（注意centos7后网卡命名有新的规则，不一定是enp3s0，请按实际情况修改）</div><div class="line">vim /etc/sysconfig/network-scripts/ifcfg-enp3s0</div></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">#网卡文件内容</div><div class="line">DEVICE=enp3s0</div><div class="line">TYPE=Ethernet</div><div class="line">ONBOOT=yes</div><div class="line">NM_CONTROLLED=no</div><div class="line">BOOTPROTO=none</div><div class="line">BRIDGE=&quot;br0&quot;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#重启网络</div><div class="line">systemctl restart network</div></pre></td></tr></table></figure>
+<h2 id="9-新建虚拟磁盘存放文件夹"><a href="#9-新建虚拟磁盘存放文件夹" class="headerlink" title="9. 新建虚拟磁盘存放文件夹"></a>9. 新建虚拟磁盘存放文件夹</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#查看分区空间</div><div class="line">df -h</div><div class="line">#新建文件夹</div><div class="line">mkdir /home/kvm-img</div><div class="line">#修为文件夹权限</div><div class="line">chmod 777 /home/kvm-img/</div></pre></td></tr></table></figure>
+<h2 id="10-新建虚拟并安装win7"><a href="#10-新建虚拟并安装win7" class="headerlink" title="10. 新建虚拟并安装win7"></a>10. 新建虚拟并安装win7</h2><p>下载win7iso文件或使用scp从别的服务器拷贝<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">virt-install --name=win7 --ram 2045 --vcpus=2 \</div><div class="line">--cdrom /home/kvm-img/win7.iso \</div><div class="line">--disk path=/home/kvm-img/7.img,size=40,format=qcow2 \</div><div class="line">--network bridge=br0 \</div><div class="line">--graphics vnc,listen=0.0.0.0,port=5910,password=123456</div></pre></td></tr></table></figure></p>
+<h2 id="11-通过vnc客户端链接完成安装"><a href="#11-通过vnc客户端链接完成安装" class="headerlink" title="11. 通过vnc客户端链接完成安装"></a>11. 通过vnc客户端链接完成安装</h2><p>使用ip端口<br>192.168.1.2:5910<br>密码<br>123456</p>
+
+    </article>
+    <!-- 前后页  -->
+    <ul class="post-pager">
+        
+        
+            <li class="previous">
+                <a href= "/2017/09/06/centos7最小化安装/" title= centos7最小化安装 >
+                    <span>Previous Post</span>
+                    <span>centos7最小化安装</span>
+                </a>
+            </li>
+        
+    </ul>
+    <!-- 来必力City版安装代码 -->
+
+    
+    <div id="lv-container" data-id="city" data-uid= MTAyMC8zMDk2MC83NTA5>
+        <script type="text/javascript">
+            (function (d, s) {
+                var j, e = d.getElementsByTagName(s)[0];
+                if (typeof LivereTower === 'function') { return; }
+                j = d.createElement(s);
+                j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+                j.async = true;
+
+                e.parentNode.insertBefore(j, e);
+            })(document, 'script');
+        </script>
+        <noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+    
+
+<!-- City版安装代码已完成 -->
+</main>
+            <!-- profile -->
+            
+       </div>
+        <footer class="footer">
+    <!-- social  -->
+    
+    <div class="social">
+        
+    
+        
+            
+                <a href="/atom.xml" class="iconfont-archer rss" target="_blank" title="rss"></a>
+            
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+
+    </div>
+    
+    <!-- powered by Hexo  -->
+    <div class="copyright">
+        <span id="hexo-power">Powered by <a href="https://hexo.io/" target="_blank">Hexo</a></span><span class="iconfont-archer power">&#xe635;</span>
+        <span
+            id="theme-info">Theme <a href="https://github.com/fi3ework/hexo-theme-archer" target="_blank">archer</a></span>
+ 
+
+    <a href=http://www.miitbeian.gov.cn target="_blank">粤ICP备14030059号-2</a>
+
+    
+    &copy; 2017 14
+    
+
+
+
+   </div>
+    <!-- 不蒜子  -->
+    
+    <div class="busuanzi-container">
+        <span id="busuanzi_container_site_pv">Welcome, No. <span id="busuanzi_value_site_pv"></span>
+        </span>
+    </div>
+    
+</footer>
+
+    </div>
+    <div class="back-top">&#xe639;</div>
+    <div class="sidebar">
+    <div class="sidebar-header">
+        <div class="sidebar-category">
+            <span class="sidebar-archive-link"><span class="iconfont-archer">&#xe67d;</span>Archive</span>
+            <span class="sidebar-tags-link"><span class="iconfont-archer">&#xe610;</span>Tag</span>
+        </div>
+    </div>
+    <div class="sidebar-content sidebar-content-show-archive">
+          <div class="sidebar-archive">
+    <!-- 在ejs中将archive按照时间排序 -->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 10 </div>
+    
+    <div class="post-archive">
+    
+    
+    
+    
+    <div class="archive-year"> 2017 </div>
+    <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/19</span><a class="archive-post-title" href= "/2017/09/19/centos7安装KVM（vnc管理）/" >centos7安装KVM（vnc管理）</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/06</span><a class="archive-post-title" href= "/2017/09/06/centos7最小化安装/" >centos7最小化安装</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">09/06</span><a class="archive-post-title" href= "/2017/09/06/linux重命名文件夹/" >linux重命名文件夹</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/29</span><a class="archive-post-title" href= "/2017/08/29/CENTOS7安装REALVNC5-3-3/" >CENTOS7安装REALVNC5.3.3</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/21</span><a class="archive-post-title" href= "/2017/08/21/linux刻录-dd命令/" >linux刻录(dd命令)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/17</span><a class="archive-post-title" href= "/2017/08/17/vi查找-搜索/" >vi查找(搜索)</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">08/17</span><a class="archive-post-title" href= "/2017/08/17/vi多行注释及取消注释/" >vi多行注释及取消注释</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2017/07/31/vi基本用法/" >vi基本用法</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2017/07/31/hexo新建文章/" >新建文章</a>
+        </li>
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">07/28</span><a class="archive-post-title" href= "/2017/07/28/GITHUB-HEXO搭建博客/" >GITHUB+HEXO搭建博客</a>
+        </li>
+    
+    </div>
+  </div>
+        <div class="sidebar-tags">
+    <div class="sidebar-tags-name">
+    
+        <span class="sidebar-tag-name"><a href= "#">CENTOS</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">VNC</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">hexo教程</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">KVM</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">linux教程</a></span>
+    
+        <span class="sidebar-tag-name"><a href= "#">vi教程</a></span>
+    
+    </div>
+    <div class="tag-load-fail" style="display: none; color: #ccc; font-size: 0.6rem;">
+    缺失模块。<br/>
+    1、请确保node版本大于6.2<br/>
+    2、在博客根目录（注意不是archer根目录）执行以下命令：<br/>
+    <span style="color: #f75357; font-size: 1rem; line-height: 2rem;">npm i hexo-generator-json-content --save</span><br/>
+    3、在根目录_config.yml里添加配置：
+    <pre style="color: #888; font-size: 0.6rem;">
+jsonContent:
+  meta: false
+  pages: false
+  posts:
+    title: true
+    date: true
+    path: true
+    text: false
+    raw: false
+    content: false
+    slug: false
+    updated: false
+    comments: false
+    link: false
+    permalink: false
+    excerpt: false
+    categories: false
+    tags: true</pre>
+    </div> 
+    <div class="sidebar-tag-list"></div>
+</div>
+    </div>
+</div> 
+    <script>
+    var jsInfo = {
+        root: '/'
+    }
+</script>
+    <!-- 不蒜子  -->
+    
+    <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    
+    <!-- CNZZ统计  -->
+    
+    </div>
+    </body>
+</html>
+
+
