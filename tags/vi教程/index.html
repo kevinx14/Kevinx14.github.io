@@ -8,7 +8,7 @@
         CNOSX
         
     </title>
-    <link rel="icon" href= >
+   <link rel="icon" href= >
     <!-- 提前加载place holder  -->
     <style>
         @font-face {
@@ -77,6 +77,7 @@
     
     <a class="home-link" href=/>CNOSX</a>
 </header>
+
     <div class="wrapper">
         <div class="site-intro">
     
@@ -126,7 +127,6 @@ vi查找
                 <!-- tags  -->
                 
                 <div class= abstract-tags >
-
     
         <a class="post-tag" href="javascript:void(0);" data-href = vi教程>vi教程</a>
     
@@ -175,7 +175,6 @@ vi取消注释
                 <!-- tags  -->
                 
                 <div class= abstract-tags >
-
     
         <a class="post-tag" href="javascript:void(0);" data-href = vi教程>vi教程</a>
     
@@ -222,7 +221,6 @@ vi保存与提出文件
                 <!-- tags  -->
                 
                 <div class= abstract-tags >
-
     
         <a class="post-tag" href="javascript:void(0);" data-href = vi教程>vi教程</a>
     
@@ -306,15 +304,51 @@ vi保存与提出文件
 
     </div>
     <div class="back-top">&#xe639;</div>
-    <div class="sidebar">
-    <div class="sidebar-header">
+    <div class="sidebar" style="background:#222222;color:#222222">
+   <div class="sidebar-header">
         <div class="sidebar-category">
-            <span class="sidebar-archive-link"><span class="iconfont-archer">&#xe67d;</span>Archive</span>
-            <span class="sidebar-tags-link"><span class="iconfont-archer">&#xe610;</span>Tag</span>
+            <span class="sidebar-archive-link"><span class="iconfont-archer">&#xe67d;</span>归档</span>
+            <span class="sidebar-tags-link"><span class="iconfont-archer">&#xe610;</span>分类</span>
         </div>
-    </div>
+</div>
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-archive">
+
+
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+ <a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+
     <!-- 在ejs中将archive按照时间排序 -->
     
     
@@ -490,7 +524,44 @@ vi保存与提出文件
     
     </div>
   </div>
+
         <div class="sidebar-tags">
+
+
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
+  </div>
+
+ <a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+<!-- syntax highlighting -->
+
+
+
     <div class="sidebar-tags-name">
     
         <span class="sidebar-tag-name"><a href= "#">CENTOS</a></span>
@@ -534,8 +605,10 @@ jsonContent:
     </div> 
     <div class="sidebar-tag-list"></div>
 </div>
+
     </div>
 </div> 
+
     <script>
     var jsInfo = {
         root: '/'
