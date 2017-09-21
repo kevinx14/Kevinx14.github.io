@@ -101,6 +101,7 @@
 </div>
         <div class="container">
             <main class="main index-page">
+<div id="nav"></div>
     
     
     
@@ -285,7 +286,7 @@ vi教程
 
     </div>
     <div class="back-top">&#xe639;</div>
-    <div class="sidebar" style="background:#222222;color:#222222">
+    <div class="sidebar">
    <div class="sidebar-header">
         <div class="sidebar-category">
             <span class="sidebar-archive-link"><span class="iconfont-archer">&#xe67d;</span>归档</span>
@@ -294,41 +295,42 @@ vi教程
 </div>
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-archive">
+<div class="section" id="Search">
+	<div class="section_content">
+		<div id="search-content" class="archer-search">
+			<div id="search-view">
+				<div class="search-info box">
+					<input type="search" onfocus="this.select()" value="搜索" id="search-input" placeholder="" >
+					<div class="magnifying-glass" id="search-button" >
 
 
-  <div id="site_search">
-   <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
-   </div>  
-  <div id="local-search-result"></div>
-  </div>
+				</div>
+			</div>
+			<div class="modal" id="search-result" style="display:none">
+				<h2 id="search-result-title">找到 0 个匹配:</h2>
+				<ul id="search-result-list">
+				</ul>
+				<span>
+					<button onclick="dismissSearchResultModal()">×</button>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
 
- <a id="gotop" href="#">   
-  <span>▲</span> 
-</a>
+<script src="/js/jquery-3.1.1.min.js"></script>
+<script src="/js/search.js"></script>
+<script type="text/javascript">
+var path = "/search.xml";
+searchFunc(path, 'search-input', 'search-result-list');
+</script>
 
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/search.js"></script> 
-
-
-
-
-   <script type="text/javascript">      
-     var search_path = "search.xml";
-	 if (search_path.length == 0) {
-	 	search_path = "search.xml";
-	 }
-	 var path = "/" + search_path;
-     searchFunc(path, 'local-search-input', 'local-search-result');
-   </script>
-
-
-<!-- syntax highlighting -->
-
-
+<script>
+function dismissSearchResultModal() {
+	document.getElementById("search-result").style.display = "none";
+}
+</script>
+</div>
 
     <!-- 在ejs中将archive按照时间排序 -->
     
@@ -507,40 +509,6 @@ vi教程
   </div>
 
         <div class="sidebar-tags">
-
-
-  <div id="site_search">
-   <div class="form-group">
-    <input type="text" id="local-search-input" name="q" results="0" placeholder="search" class="st-search-input st-default-search-input form-control"/>
-   </div>  
-  <div id="local-search-result"></div>
-  </div>
-
- <a id="gotop" href="#">   
-  <span>▲</span> 
-</a>
-
-<script src="/js/jquery.imagesloaded.min.js"></script>
-<script src="/js/gallery.js"></script>
-<script src="/js/bootstrap.min.js"></script>
-<script src="/js/main.js"></script>
-<script src="/js/search.js"></script> 
-
-
-
-
-   <script type="text/javascript">      
-     var search_path = "search.xml";
-	 if (search_path.length == 0) {
-	 	search_path = "search.xml";
-	 }
-	 var path = "/" + search_path;
-     searchFunc(path, 'local-search-input', 'local-search-result');
-   </script>
-
-
-<!-- syntax highlighting -->
-
 
 
     <div class="sidebar-tags-name">

@@ -34,14 +34,15 @@ var searchFunc = function(path, search_id, content_id) {
             }).get();
 
             var $input = document.getElementById(search_id);
-			if (!$input) return;
             var $resultContent = document.getElementById(content_id);
 
             $input.addEventListener('input', function(){
-                var str='<ul class=\"search-result-list\">';                
+                var str='';
+                var count=0;              
                 var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
                 $resultContent.innerHTML = "";
                 if (this.value.trim().length <= 0) {
+                    document.getElementById("search-result").style.display = "none";
                     return;
                 }
                 // perform local searching
@@ -80,41 +81,21 @@ var searchFunc = function(path, search_id, content_id) {
                     }
                     // show search results
                     if (isMatch) {
-                        str += "<li><a href='"+ data_url +"' class='search-result-title'>"+ data_title +"</a>";
-                        var content = data.content.trim().replace(/<[^>]+>/g,"");
-                        if (first_occur >= 0) {
-                            // cut out 100 characters
-                            var start = first_occur - 20;
-                            var end = first_occur + 80;
-
-                            if(start < 0){
-                                start = 0;
-                            }
-
-                            if(start == 0){
-                                end = 100;
-                            }
-
-                            if(end > content.length){
-                                end = content.length;
-                            }
-
-                            var match_content = content.substr(start, end); 
-
-                            // highlight all keywords
-                            keywords.forEach(function(keyword){
-                                var regS = new RegExp(keyword, "gi");
-                                match_content = match_content.replace(regS, "<em class=\"search-keyword\">"+keyword+"</em>");
-                            });
-                            
-                            str += "<p class=\"search-result\">" + match_content +"...</p>"
-                        }
+                        str += "<li><a href='"+ data_url +"'>"+ data_title +"</a>";
                         str += "</li>";
+                        count+=1;
                     }
                 });
-                str += "</ul>";
+
+                if (count == 0) {
+                    document.getElementById("search-result-title").innerHTML = "找到 0 个匹配.";
+                } else {
+                    document.getElementById("search-result-title").innerHTML = "找到 "+count+" 个匹配:";
+                }
                 $resultContent.innerHTML = str;
+                document.getElementById("search-result").style.display = "block";
             });
         }
     });
 }
+
