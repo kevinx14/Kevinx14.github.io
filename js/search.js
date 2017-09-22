@@ -81,7 +81,7 @@ var searchFunc = function(path, search_id, content_id) {
                     }
                     // show search results
                     if (isMatch) {
-                        str += "<li><a href='"+ data_url +"'>"+ data_title +"</a>";
+                        str += "<li class=archive-post-item ><a class=archive-post-title href='"+ data_url +"'>"+ data_title +"</a>";
                         str += "</li>";
                         count+=1;
                     }

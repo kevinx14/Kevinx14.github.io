@@ -634,12 +634,9 @@ vi教程
 				</div>
 			</div>
 			<div class="modal" id="search-result" style="display:none">
-				<h2 id="search-result-title">找到 0 个匹配:</h2>
-				<ul id="search-result-list">
+				<div class="total-archive" id="search-result-title">找到 0 个匹配:</div>
+				<ul class="year-list" id="search-result-list">
 				</ul>
-				<span>
-					<button onclick="dismissSearchResultModal()">×</button>
-				</span>
 			</div>
 		</div>
 	</div>
@@ -652,11 +649,6 @@ var path = "/search.xml";
 searchFunc(path, 'search-input', 'search-result-list');
 </script>
 
-<script>
-function dismissSearchResultModal() {
-	document.getElementById("search-result").style.display = "none";
-}
-</script>
 </div>
 
     <!-- 在ejs中将archive按照时间排序 -->
