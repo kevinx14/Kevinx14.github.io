@@ -37,13 +37,6 @@
     </url>
 
     <url>
-        <loc>http://www.cnosx.com/tags/ZSH/</loc>
-        <lastmod>2017-09-22T05:54:04.721Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.cnosx.com/tags/CENTOS/</loc>
         <lastmod>2017-09-22T05:58:17.485Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -52,7 +45,7 @@
 
     <url>
         <loc>http://www.cnosx.com/tags/OH-MY-ZSH/</loc>
-        <lastmod>2017-09-22T05:58:17.485Z</lastmod>
+        <lastmod>2017-09-22T05:59:00.732Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
