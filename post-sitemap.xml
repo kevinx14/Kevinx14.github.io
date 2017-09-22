@@ -7,6 +7,14 @@
     </url>
 
     <url>
+        <loc>http://www.cnosx.com/2017/09/22/oh-my-zsh%E6%9B%B4%E6%8D%A2%E4%B8%BB%E9%A2%98/</loc>
+        <lastmod>2017-09-22T05:54:04.721Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
         <loc>http://www.cnosx.com/2017/09/19/centos7%E5%AE%89%E8%A3%85KVM%EF%BC%88vnc%E7%AE%A1%E7%90%86%EF%BC%89/</loc>
         <lastmod>2017-09-19T10:16:26.621Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -55,14 +63,6 @@
     </url>
 
     <url>
-        <loc>http://www.cnosx.com/2017/07/31/hexo%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0/</loc>
-        <lastmod>2017-09-06T06:32:33.846Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
         <loc>http://www.cnosx.com/2017/08/21/linux%E5%88%BB%E5%BD%95-dd%E5%91%BD%E4%BB%A4/</loc>
         <lastmod>2017-09-06T06:32:33.846Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -71,7 +71,7 @@
     </url>
 
     <url>
-        <loc>http://www.cnosx.com/2017/07/31/vi%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</loc>
+        <loc>http://www.cnosx.com/2017/07/31/hexo%E6%96%B0%E5%BB%BA%E6%96%87%E7%AB%A0/</loc>
         <lastmod>2017-09-06T06:32:33.846Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
@@ -80,6 +80,14 @@
 
     <url>
         <loc>http://www.cnosx.com/2017/08/17/vi%E5%A4%9A%E8%A1%8C%E6%B3%A8%E9%87%8A%E5%8F%8A%E5%8F%96%E6%B6%88%E6%B3%A8%E9%87%8A/</loc>
+        <lastmod>2017-09-06T06:32:33.846Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://www.cnosx.com/2017/07/31/vi%E5%9F%BA%E6%9C%AC%E7%94%A8%E6%B3%95/</loc>
         <lastmod>2017-09-06T06:32:33.846Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>

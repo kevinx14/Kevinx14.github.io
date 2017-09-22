@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" >
     <title>
         
-        GITHUB+HEXO搭建博客 · CNOSX
+        oh-my-zsh更换主题 · CNOSX
         
     </title>
    <link rel="icon" href= >
@@ -82,7 +82,7 @@
                 <a href="/" >CNOSX</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">GITHUB+HEXO搭建博客</a>
+                <a href="#" class="post-name">oh-my-zsh更换主题</a>
             </div>
     </div>
     
@@ -104,7 +104,7 @@
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            GITHUB+HEXO搭建博客
+            oh-my-zsh更换主题
             <!-- 404 -->
             
         </h1>
@@ -122,14 +122,14 @@
             
                 <div class= post-intro-tags >
     
-        <a class="post-tag" href="javascript:void(0);" data-href = hexo教程>hexo教程</a>
+        <a class="post-tag" href="javascript:void(0);" data-href = ZSH>ZSH</a>
     
 </div>
 
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2017/07/28</span>
+                <span class="post-intro-time">2017/09/22</span>
             </div>
         
     </div>
@@ -137,37 +137,21 @@
         <div class="container">
             <main class="main post-page">
     <article class="article-entry">
-        <p>本方法在LINUX MINT下通过，理论支持UBUNTU。</p>
-<h2 id="1-注册GITHUB"><a href="#1-注册GITHUB" class="headerlink" title="1. 注册GITHUB"></a>1. 注册GITHUB</h2><p><a href="http://www.github.com" target="_blank" rel="external">http://www.github.com</a></p>
-<h3 id="填写注册信息"><a href="#填写注册信息" class="headerlink" title="填写注册信息"></a>填写注册信息</h3><p>Username用户名<br>Email邮箱<br>Password密码</p>
-<h3 id="打开邮箱中来自GITHUB的邮件，点击邮件中的激活链接，激活刚刚注册的GITHUB账号。"><a href="#打开邮箱中来自GITHUB的邮件，点击邮件中的激活链接，激活刚刚注册的GITHUB账号。" class="headerlink" title="打开邮箱中来自GITHUB的邮件，点击邮件中的激活链接，激活刚刚注册的GITHUB账号。"></a>打开邮箱中来自GITHUB的邮件，点击邮件中的激活链接，激活刚刚注册的GITHUB账号。</h3><h2 id="2-安装NODE-JS"><a href="#2-安装NODE-JS" class="headerlink" title="2. 安装NODE.JS"></a>2. 安装NODE.JS</h2><p><a href="https://nodejs.org/en/download/" target="_blank" rel="external">https://nodejs.org/en/download/</a></p>
-<h3 id="在终端中输入"><a href="#在终端中输入" class="headerlink" title="在终端中输入"></a>在终端中输入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">#切换到home目录</div><div class="line">cd /home</div><div class="line">#下载nodejs</div><div class="line">wget https://nodejs.org/dist/v6.11.1/node-v6.11.1.tar.gz</div><div class="line">#解压缩nodejs包</div><div class="line">tar zxvf node-v6.11.1.tar.gz</div><div class="line">#切换到刚解压的nodejs安装包目录</div><div class="line">cd /home/node-v6.11.1/</div><div class="line">#检测并生成make文件</div><div class="line">./configure</div><div class="line">#安装nodejs</div><div class="line">make install</div><div class="line">#显示nodejs版本，检测是否安装成</div><div class="line">node -v</div><div class="line">#安装nodejs-legacy包</div><div class="line">sudo apt install nodejs-legacy</div><div class="line">#安装nodejs包</div><div class="line">sudo apt-get install nodejs</div><div class="line">#安装build-essential包</div><div class="line">sudo apt-get install -y build-essential  #依赖包不记得是不是必要的</div></pre></td></tr></table></figure>
-<h2 id="3-安装NPM"><a href="#3-安装NPM" class="headerlink" title="3. 安装NPM"></a>3. 安装NPM</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#安装npm</div><div class="line">sudo apt-get install -y npm</div></pre></td></tr></table></figure>
-<h2 id="4-安装HEXO"><a href="#4-安装HEXO" class="headerlink" title="4. 安装HEXO"></a>4. 安装HEXO</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#使用npm安装hexo</div><div class="line">sudo npm install -g hexo</div></pre></td></tr></table></figure>
-<h2 id="5-创建hexo实例"><a href="#5-创建hexo实例" class="headerlink" title="5. 创建hexo实例"></a>5. 创建hexo实例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">#创建hexo目录</div><div class="line">mkdir /home/hexo</div><div class="line">#切换到hexo目录</div><div class="line">cd /home/hexo</div><div class="line">#新建hexo项目</div><div class="line">hexo init</div><div class="line">#生成静态网站</div><div class="line">hexo generate</div><div class="line">#启动hexo本地服务</div><div class="line">hexo server</div></pre></td></tr></table></figure>
-<p>成功会显示<br>INFO  Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a>. Press Ctrl+C to stop.<br>按Ctrl+C跳出<br>此时你可以在浏览器中输入<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> ，查看到刚刚生成的网站。</p>
-<h2 id="6-创建ssh-key"><a href="#6-创建ssh-key" class="headerlink" title="6. 创建ssh key"></a>6. 创建ssh key</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">#配置git用户名</div><div class="line">git config --global user.name &quot;注册GITHUB的用户名&quot;</div><div class="line">#配置git邮箱</div><div class="line">git config --global user.email &quot;注册GITHUB的邮箱&quot;</div><div class="line">#生成ssh key</div><div class="line">ssh-keygen -t rsa -C &quot;注册GITHUB的邮箱&quot;</div></pre></td></tr></table></figure>
-<p>“Enter file in which to save the key (/home/当前用户名/.ssh/id_rsa)”直接按回车<br>“Enter passphrase (empty for no passphrase): ”直接按回车<br>“Enter same passphrase again: ”直接按回车<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#查看刚刚说生成的ssh key</div><div class="line">cat /home/当前用户名/.ssh/id_rsa.pub</div></pre></td></tr></table></figure></p>
-<p>会显示出密匙等下需要用到。</p>
-<h2 id="7-创建博客git库"><a href="#7-创建博客git库" class="headerlink" title="7. 创建博客git库"></a>7. 创建博客git库</h2><p><a href="http://www.github.com" target="_blank" rel="external">http://www.github.com</a><br>登录GITHUB<br>单击右上叫头像边上的倒三角”▼”<br>下拉菜单中选择Settings<br>点击SSH and GPG keys<br>点击New SSH key<br>将刚刚生成的密匙复制到Key框中<br>点击Add SSH key</p>
-<h2 id="8-拷贝文件至博客git本地库"><a href="#8-拷贝文件至博客git本地库" class="headerlink" title="8. 拷贝文件至博客git本地库"></a>8. 拷贝文件至博客git本地库</h2><p><a href="http://www.github.com" target="_blank" rel="external">http://www.github.com</a><br>登录GITHUB<br>点击Start a project按钮<br>Repository name中输入 “注册GITHUB的用户名.github.io” PS:必须按照这个命名格式<br>点击Create repository按钮<br>在命令行输入<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#创建blog</div><div class="line">mkdir /home/blog</div><div class="line">#切换到blog</div><div class="line">cd /home/blog</div></pre></td></tr></table></figure></p>
-<p>复制…or create a new repository on the command line框格内的命令到命令行中执行</p>
-<h2 id="9-注册域名、添加解析"><a href="#9-注册域名、添加解析" class="headerlink" title="9. 注册域名、添加解析"></a>9. 注册域名、添加解析</h2><p>域名注册就不多说了，万网，新网，腾讯云，百度云都有，操作都很傻瓜。<br>添加一条CNAME解析</p>
-<p>记录类型  主机记录  记录值<br>CNAME www 注册GITHUB的用户名.github.io</p>
-<h2 id="10-上传博客git本地库"><a href="#10-上传博客git本地库" class="headerlink" title="10. 上传博客git本地库"></a>10. 上传博客git本地库</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">#切换到blog</div><div class="line">cd /home/blog</div><div class="line">#将git二级域名添加到CNAME文件</div><div class="line">echo &quot;注册GITHUB的用户名.github.io&quot; &gt;&gt; CNAME</div><div class="line">#将hexo中的静态网站复制到bolg中</div><div class="line">cp -rf /home/hexo/public/* /home/blog/</div><div class="line">#添加所有文件至git列表</div><div class="line">git add .</div><div class="line">#备注此次上传说明</div><div class="line">git commit -m &quot;说明内容&quot;</div><div class="line">#上传blog至git库</div><div class="line">git push origin master</div></pre></td></tr></table></figure>
-<p>然后现在到浏览器输入你的域名是不是就可以打开你的博客了。</p>
+        <h2 id="1-挑选喜欢的主题"><a href="#1-挑选喜欢的主题" class="headerlink" title="1. 挑选喜欢的主题"></a>1. 挑选喜欢的主题</h2><p><a href="https://github.com/robbyrussell/oh-my-zsh/wiki/Themes" target="_blank" rel="external">https://github.com/robbyrussell/oh-my-zsh/wiki/Themes</a></p>
+<h2 id="2-编辑配置文件"><a href="#2-编辑配置文件" class="headerlink" title="2. 编辑配置文件"></a>2. 编辑配置文件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#修改配置文件</div><div class="line">vim ~/.zshrc</div></pre></td></tr></table></figure>
+<p>修改此行<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ZSH_THEME=robbyrussell</div></pre></td></tr></table></figure></p>
 
     </article>
     <!-- 前后页  -->
     <ul class="post-pager">
         
-            <li class="next">
-                <a href= "/2017/07/31/hexo新建文章/" title= 新建文章 >
-                    <span>Next Post</span>
-                    <span>新建文章</span>
+        
+            <li class="previous">
+                <a href= "/2017/09/19/centos7安装KVM（vnc管理）/" title= centos7安装KVM（vnc管理） >
+                    <span>Previous Post</span>
+                    <span>centos7安装KVM（vnc管理）</span>
                 </a>
             </li>
-        
         
     </ul>
     <!-- 来必力City版安装代码 -->
