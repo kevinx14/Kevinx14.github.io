@@ -20,6 +20,29 @@
     </entry>
     
     <entry>
+      <title><![CDATA[centos安装oh_my_zsh]]></title>
+      <url>/2017/09/22/centos%E5%AE%89%E8%A3%85oh-my-zsh/</url>
+      <content type="html"><![CDATA[<h2 id="1-安装zsh"><a href="#1-安装zsh" class="headerlink" title="1. 安装zsh"></a>1. 安装zsh</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#安装zsh</div><div class="line">yum -y install zsh</div></pre></td></tr></table></figure>
+<h2 id="2-安装oh-my-zsh"><a href="#2-安装oh-my-zsh" class="headerlink" title="2. 安装oh_my_zsh"></a>2. 安装oh_my_zsh</h2><p>oh_my_zsh官网<br><a href="http://ohmyz.sh/" target="_blank" rel="external">http://ohmyz.sh/</a></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#安装oh_my_zsh</div><div class="line">sh -c &quot;$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)&quot;</div></pre></td></tr></table></figure>
+<h2 id="3-切换shell至zsh"><a href="#3-切换shell至zsh" class="headerlink" title="3. 切换shell至zsh"></a>3. 切换shell至zsh</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#切换shell至zsh</div><div class="line">chsh -s /bin/zsh</div></pre></td></tr></table></figure>
+<h2 id="4-重启系统"><a href="#4-重启系统" class="headerlink" title="4. 重启系统"></a>4. 重启系统</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">reboot</div></pre></td></tr></table></figure>
+<p>附件：<br>相关命令</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#查看当前shell</div><div class="line">echo $SHELL</div></pre></td></tr></table></figure>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> CENTOS </tag>
+            
+            <tag> OH_MY_ZSH </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[centos7安装KVM（vnc管理）]]></title>
       <url>/2017/09/19/centos7%E5%AE%89%E8%A3%85KVM%EF%BC%88vnc%E7%AE%A1%E7%90%86%EF%BC%89/</url>
       <content type="html"><![CDATA[<h2 id="1-centos7最小化安装"><a href="#1-centos7最小化安装" class="headerlink" title="1. centos7最小化安装"></a>1. centos7最小化安装</h2><p><a href="http://www.cnosx.com/2017/09/06/centos7最小化安装/">http://www.cnosx.com/2017/09/06/centos7最小化安装/</a></p>
