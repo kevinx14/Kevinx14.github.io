@@ -307,21 +307,17 @@ vi教程
         <div class="sidebar-category">
             <span class="sidebar-archive-link"><span class="iconfont-archer">&#xe67d;</span>归档</span>
             <span class="sidebar-tags-link"><span class="iconfont-archer">&#xe610;</span>分类</span>
-<!--            <span class="sidebar-search-link"><span class="iconfont-archer">&#xe67e;</span>搜索</span>
--->
         </div>
 </div>
     <div class="sidebar-content sidebar-content-show-archive">
           <div class="sidebar-archive">
-<dceholder=iv class="sidebar-search" id="Search">
+<div class="section" id="Search">
 	<div class="section_content">
-		<div id="search-content" class="archer-search">
+		<div id="search-content" class="search-content-modal unexpanded">
 			<div id="search-view">
 				<div class="search-info box">
-					<input type="search" style="width:100%" onfocus="this.select()" value="搜索" id="search-input" placeholder="" >
+					<input style="width:100%" onfocus="this.select()" value="搜索" id="search-input" placeholder="" >
 					<div class="magnifying-glass" id="search-button" >
-
-
 				</div>
 			</div>
 			<div class="modal" id="search-result" style="display:none">
@@ -340,6 +336,11 @@ var path = "/search.xml";
 searchFunc(path, 'search-input', 'search-result-list');
 </script>
 
+<script>
+function dismissSearchResultModal() {
+	document.getElementById("search-result").style.display = "none";
+}
+</script>
 </div>
 
     <!-- 在ejs中将archive按照时间排序 -->
@@ -598,37 +599,6 @@ jsonContent:
     </div> 
     <div class="sidebar-tag-list"></div>
 </div>
-
-        <dceholder=iv class="sidebar-search" id="Search">
-	<div class="section_content">
-		<div id="search-content" class="archer-search">
-			<div id="search-view">
-				<div class="search-info box">
-					<input type="search" style="width:100%" onfocus="this.select()" value="搜索" id="search-input" placeholder="" >
-					<div class="magnifying-glass" id="search-button" >
-
-
-				</div>
-			</div>
-			<div class="modal" id="search-result" style="display:none">
-				<div class="total-archive" id="search-result-title">找到 0 个匹配:</div>
-				<ul class="year-list" id="search-result-list">
-				</ul>
-			</div>
-		</div>
-	</div>
-</div>
-
-<script src="/js/jquery-3.1.1.min.js"></script>
-<script src="/js/search.js"></script>
-<script type="text/javascript">
-var path = "/search.xml";
-searchFunc(path, 'search-input', 'search-result-list');
-</script>
-
-</div>
-
-
 
     </div>
 </div> 
