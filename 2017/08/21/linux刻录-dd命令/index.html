@@ -269,10 +269,6 @@
 			<div id="search-view">
 				<div class="search-info box">
 					<input style="width:100%" onfocus="this.select()" onmouseup="onmouseupFn(event);" value="搜索" id="search-input" placeholder="" >
-function onmouseupFn(eventTag) {  
-    var event = eventTag||window.event;    
-    event.preventDefault();  
-} 
 					<div class="magnifying-glass" id="search-button" >
 				</div>
 			</div>
@@ -295,6 +291,11 @@ searchFunc(path, 'search-input', 'search-result-list');
 <script>
 function dismissSearchResultModal() {
 	document.getElementById("search-result").style.display = "none";
+}
+
+function onmouseupFn(eventTag) {  
+    var event = eventTag||window.event;    
+    event.preventDefault();  
 }
 </script>
 </div>
