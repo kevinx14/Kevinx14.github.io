@@ -3,6 +3,22 @@
   
     
     <entry>
+      <title><![CDATA[markdown在线编辑器]]></title>
+      <url>/2017/09/25/markdown%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91%E5%99%A8/</url>
+      <content type="html"><![CDATA[<h3 id="Editor-md"><a href="#Editor-md" class="headerlink" title="Editor.md"></a>Editor.md</h3><p>Editor.md 是一款开源的、可嵌入的 Markdown 在线编辑器（组件），基于 CodeMirror、jQuery 和 Marked 构建。</p>
+<p><a href="https://pandao.github.io/editor.md/" target="_blank" rel="external">https://pandao.github.io/editor.md/</a></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> markdown </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[wineqq]]></title>
       <url>/2017/09/25/wineqq/</url>
       <content type="html"><![CDATA[<h3 id="推荐一个wineqq"><a href="#推荐一个wineqq" class="headerlink" title="推荐一个wineqq"></a>推荐一个wineqq</h3><p>虽然不是十分完美，但应付日常使用已经足够了，非常感谢作者提供。</p>
