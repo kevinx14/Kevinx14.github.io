@@ -51,8 +51,15 @@
     </url>
 
     <url>
-        <loc>http://www.cnosx.com/tags/wineqq-qq/</loc>
-        <lastmod>2017-09-25T02:04:54.920Z</lastmod>
+        <loc>http://www.cnosx.com/tags/wineqq/</loc>
+        <lastmod>2017-09-25T02:11:32.400Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.cnosx.com/tags/qq/</loc>
+        <lastmod>2017-09-25T02:11:32.400Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
