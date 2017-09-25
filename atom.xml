@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.cnosx.com/"/>
-  <updated>2017-09-25T06:14:04.460Z</updated>
+  <updated>2017-09-25T06:19:52.238Z</updated>
   <id>http://www.cnosx.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://www.cnosx.com/2017/09/25/markdown%E5%9C%A8%E7%BA%BF%E7%BC%96%E8%BE%91%E5%99%A8/"/>
     <id>http://www.cnosx.com/2017/09/25/markdown在线编辑器/</id>
     <published>2017-09-25T06:10:59.000Z</published>
-    <updated>2017-09-25T06:14:04.460Z</updated>
+    <updated>2017-09-25T06:19:52.238Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Editor-md"><a href="#Editor-md" class="headerlink" title="Editor.md"></a>Editor.md</h3><p>Editor.md 是一款开源的、可嵌入的 Markdown 在线编辑器（组件），基于 CodeMirror、jQuery 和 Marked 构建。</p><p><a href="https://pandao.github.io/editor.md/" target="_blank" rel="external">https://pandao.github.io/editor.md/</a></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="Editor-md"><a href="#Editor-md" class="headerlink" title="Editor.md"></a>Editor.md</h3><p>Editor.md 是一款开源的、可嵌入的 Markdown 在线编辑器（组件），基于 CodeMirror、jQuery 和 Marked 构建。</p><p><a href="https://pandao.github.io/editor.md/{:target=&quot;_blank&quot;}" target="_blank" rel="external">https://pandao.github.io/editor.md/{:target=&quot;_blank&quot;}</a></p>]]></content>
     
     <summary type="html">
     
