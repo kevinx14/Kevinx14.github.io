@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.cnosx.com/"/>
-  <updated>2017-10-08T01:22:16.609Z</updated>
+  <updated>2017-10-08T02:07:35.402Z</updated>
   <id>http://www.cnosx.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://www.cnosx.com/2017/10/08/%E9%98%BF%E9%87%8C%E4%BA%91ECS%E5%85%AC%E5%8C%99%E6%97%A0%E6%B3%95%E7%99%BB%E9%99%86/"/>
     <id>http://www.cnosx.com/2017/10/08/阿里云ECS公匙无法登陆/</id>
     <published>2017-10-08T01:18:04.000Z</published>
-    <updated>2017-10-08T01:22:16.609Z</updated>
+    <updated>2017-10-08T02:07:35.402Z</updated>
     
-    <content type="html"><![CDATA[<p>@@@@@@@@@@@@@@@@@@@@@@@@@<br>@  WARNING: UNPROTECTED PRIVATE KEY FILE!  @<br>@@@@@@@@@@@@@@@@@@@@@@@@@<br>Permissions 0777 for ‘<em>.pem’ are too open.<br>It is required that your private key files are NOT accessible by others.<br>This private key will be ignored.<br>Load key “</em>.pem”: bad permissions<br>Permission denied (publickey,gssapi-keyex,gssapi-with-mic).</p><p>因为文件权限太大。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod 700 *.pem</div></pre></td></tr></table></figure>]]></content>
+    <content type="html"><![CDATA[<p>@@@@@@@@@@@@@@@@@@@@@@@@@<br>@  WARNING: UNPROTECTED PRIVATE KEY FILE!  @<br>@@@@@@@@@@@@@@@@@@@@@@@@@<br>Permissions 0777 for ‘<em>.pem’ are too open.<br>It is required that your private key files are NOT accessible by others.<br>This private key will be ignored.<br>Load key “</em>.pem”: bad permissions<br>Permission denied (publickey,gssapi-keyex,gssapi-with-mic).</p><p>因为文件权限太大。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod 700 *.pem</div></pre></td></tr></table></figure><p>如果不行可以试试<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod 644 *.pem</div></pre></td></tr></table></figure></p><p>或<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod 600 *.pem</div></pre></td></tr></table></figure></p>]]></content>
     
     <summary type="html">
     

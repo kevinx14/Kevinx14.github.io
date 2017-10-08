@@ -44,13 +44,6 @@
     </url>
 
     <url>
-        <loc>http://www.cnosx.com/tags/linux%E6%95%99%E7%A8%8B/</loc>
-        <lastmod>2017-10-08T01:22:16.609Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.cnosx.com/tags/CENTOS/</loc>
         <lastmod>2017-10-08T01:23:06.083Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -67,6 +60,13 @@
     <url>
         <loc>http://www.cnosx.com/tags/KVM/</loc>
         <lastmod>2017-10-08T01:23:06.083Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.cnosx.com/tags/linux%E6%95%99%E7%A8%8B/</loc>
+        <lastmod>2017-10-08T02:07:35.402Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

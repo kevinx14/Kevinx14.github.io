@@ -8,6 +8,8 @@
       <content type="html"><![CDATA[<p>@@@@@@@@@@@@@@@@@@@@@@@@@<br>@  WARNING: UNPROTECTED PRIVATE KEY FILE!  @<br>@@@@@@@@@@@@@@@@@@@@@@@@@<br>Permissions 0777 for ‘<em>.pem’ are too open.<br>It is required that your private key files are NOT accessible by others.<br>This private key will be ignored.<br>Load key “</em>.pem”: bad permissions<br>Permission denied (publickey,gssapi-keyex,gssapi-with-mic).</p>
 <p>因为文件权限太大。</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod 700 *.pem</div></pre></td></tr></table></figure>
+<p>如果不行可以试试<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod 644 *.pem</div></pre></td></tr></table></figure></p>
+<p>或<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chmod 600 *.pem</div></pre></td></tr></table></figure></p>
 ]]></content>
       
         
