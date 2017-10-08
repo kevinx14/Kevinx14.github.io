@@ -150,7 +150,7 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#编辑selinx</div><div class="line">vim /etc/sysconfig/selinux</div></pre></td></tr></table></figure>
 <p>将<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELINUX=enforcing</div></pre></td></tr></table></figure></p>
 <p>修改为<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">SELINUX=disabled</div></pre></td></tr></table></figure></p>
-<h2 id="6-防火墙放行端口"><a href="#6-防火墙放行端口" class="headerlink" title="6. 防火墙放行端口"></a>6. 防火墙放行端口</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">#放行5900-5903端口</div><div class="line">firewall-cmd --permanent --add-service vnc-server</div><div class="line">#放行5904-5910端口</div><div class="line">firewall-cmd --add-port=5904:5910/tcp --permanent</div><div class="line">#删除放行5900-5903端口</div><div class="line">firewall-cmd --permanent --remove-service vnc-server</div><div class="line">#重启防火墙</div><div class="line">systemctl restart firewalld.service</div><div class="line">#查看防火墙配置</div><div class="line">iptables -L -n</div></pre></td></tr></table></figure>
+<h2 id="6-防火墙放行端口"><a href="#6-防火墙放行端口" class="headerlink" title="6. 防火墙放行端口"></a>6. 防火墙放行端口</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">#放行5900-5903端口</div><div class="line">firewall-cmd --permanent --add-service vnc-server</div><div class="line">#放行5904-5910端口</div><div class="line">firewall-cmd --add-port=5904-5910/tcp --permanent</div><div class="line">#删除放行5900-5903端口</div><div class="line">firewall-cmd --permanent --remove-service vnc-server</div><div class="line">#重启防火墙</div><div class="line">systemctl restart firewalld.service</div><div class="line">#查看防火墙配置</div><div class="line">iptables -L -n</div></pre></td></tr></table></figure>
 <h2 id="7-安装KVM所需软件"><a href="#7-安装KVM所需软件" class="headerlink" title="7. 安装KVM所需软件"></a>7. 安装KVM所需软件</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">#安装KVM所需软件</div><div class="line">yum -y install kvm kmod-kvm kvm-qemu-img libvirt Python-virtinst virt-manager virt-top virt-viewer libvirt-client qemu-kvm bridge-utils virt-install</div><div class="line">#查看KVM是否启动</div><div class="line">lsmod | grep kvm</div></pre></td></tr></table></figure>
 <h2 id="8-配置网络"><a href="#8-配置网络" class="headerlink" title="8. 配置网络"></a>8. 配置网络</h2><p>配置br0虚拟网卡<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#新建br0</div><div class="line">vim /etc/sysconfig/network-scripts/ifcfg-br0</div></pre></td></tr></table></figure></p>
 <p>DHCP获取IP（二选一）<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">DEVICE=br0</div><div class="line">TYPE=Bridge</div><div class="line">ONBOOT=yes</div><div class="line">NM_CONTROLLED=no</div><div class="line">BOOTPROTO=dhcp</div></pre></td></tr></table></figure></p>
@@ -490,7 +490,20 @@ function onmouseupFn(eventTag) {
     
     
     
-    <div class="total-archive"> Total : 14 </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="total-archive"> Total : 15 </div>
     
     <div class="post-archive">
     
@@ -499,6 +512,11 @@ function onmouseupFn(eventTag) {
     
     <div class="archive-year"> 2017 </div>
     <ul class="year-list">
+    
+    
+        <li class="archive-post-item">
+            <span class="archive-post-date">10/08</span><a class="archive-post-title" href= "/2017/10/08/阿里云ECS公匙无法登陆/" >阿里云ECS公匙无法登陆(Permission denied (publickey,gssapi-keyex,gssapi-with-mic).)</a>
+        </li>
     
     
         <li class="archive-post-item">
@@ -557,12 +575,12 @@ function onmouseupFn(eventTag) {
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2017/07/31/vi基本用法/" >vi基本用法</a>
+            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2017/07/31/hexo新建文章/" >新建文章</a>
         </li>
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2017/07/31/hexo新建文章/" >新建文章</a>
+            <span class="archive-post-date">07/31</span><a class="archive-post-title" href= "/2017/07/31/vi基本用法/" >vi基本用法</a>
         </li>
     
     

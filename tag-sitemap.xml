@@ -16,34 +16,6 @@
     </url>
 
     <url>
-        <loc>http://www.cnosx.com/tags/linux%E6%95%99%E7%A8%8B/</loc>
-        <lastmod>2017-09-06T15:59:56.330Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.cnosx.com/tags/VNC/</loc>
-        <lastmod>2017-09-19T10:16:26.621Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.cnosx.com/tags/KVM/</loc>
-        <lastmod>2017-09-19T10:16:26.621Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://www.cnosx.com/tags/CENTOS/</loc>
-        <lastmod>2017-09-22T05:58:17.485Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://www.cnosx.com/tags/OH-MY-ZSH/</loc>
         <lastmod>2017-09-22T05:59:00.732Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -67,6 +39,34 @@
     <url>
         <loc>http://www.cnosx.com/tags/qq/</loc>
         <lastmod>2017-09-25T06:26:08.222Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.cnosx.com/tags/linux%E6%95%99%E7%A8%8B/</loc>
+        <lastmod>2017-10-08T01:22:16.609Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.cnosx.com/tags/CENTOS/</loc>
+        <lastmod>2017-10-08T01:23:06.083Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.cnosx.com/tags/VNC/</loc>
+        <lastmod>2017-10-08T01:23:06.083Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://www.cnosx.com/tags/KVM/</loc>
+        <lastmod>2017-10-08T01:23:06.083Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>
