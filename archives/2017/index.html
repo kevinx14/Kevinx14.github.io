@@ -112,10 +112,10 @@
                         <span>树梅派定时播放器</span>
                     </h2>
                 <div class="abstract-content">
-                    ##安装mplayer1sudo apt-get install mplayer
-##修改系统音量1amixer set PCM 89%
-##修改计划任务1sudo crontab -e
-12345678910111213141516171819#计划任务内容18 08 * * * sudo mount -t cifs -o username=用户名,password=密码 //IP/gb$ /mnt/gb20 08 * * * mplayer -af volume=-20 -loop 0 /mnt/gb/0820/*30 08 * * * pkill mplayer29 10 * * ...
+                    安装mplayer1sudo apt-get install mplayer
+修改系统音量1amixer set PCM 89%
+修改计划任务1sudo crontab -e
+12345678910111213141516171819#计划任务内容18 08 * * * sudo mount -t cifs -o username=用户名,password=密码 //IP/gb$ /mnt/gb20 08 * * * mplayer -af volume=-20 -loop 0 /mnt/gb/0820/*30 08 * * * pkill mplayer29 10 * * * sudo...
                 </div>
             </a>
             <div class="abstract-post-meta">
