@@ -3,6 +3,22 @@
   
     
     <entry>
+      <title><![CDATA[KVM虚拟硬盘扩容]]></title>
+      <url>/2017/10/13/KVM%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98%E6%89%A9%E5%AE%B9/</url>
+      <content type="html"><![CDATA[<h3 id="1-查看虚拟硬盘大小"><a href="#1-查看虚拟硬盘大小" class="headerlink" title="1. 查看虚拟硬盘大小"></a>1. 查看虚拟硬盘大小</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">qemu-img info /home/kvm-img/7.img</div></pre></td></tr></table></figure>
+<h3 id="2-根据需要扩容虚拟硬盘"><a href="#2-根据需要扩容虚拟硬盘" class="headerlink" title="2. 根据需要扩容虚拟硬盘"></a>2. 根据需要扩容虚拟硬盘</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">qemu-img resize /home/kvm-img/7.img  +40G</div></pre></td></tr></table></figure>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> KVM </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[树梅派定时播放器]]></title>
       <url>/2017/10/08/%E6%A0%91%E6%A2%85%E6%B4%BE%E5%AE%9A%E6%97%B6%E6%92%AD%E6%94%BE%E5%99%A8/</url>
       <content type="html"><![CDATA[<h2 id="安装mplayer"><a href="#安装mplayer" class="headerlink" title="安装mplayer"></a>安装mplayer</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install mplayer</div></pre></td></tr></table></figure>

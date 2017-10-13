@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.cnosx.com/"/>
-  <updated>2017-10-08T03:09:23.145Z</updated>
+  <updated>2017-10-13T01:20:56.504Z</updated>
   <id>http://www.cnosx.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>KVM虚拟硬盘扩容</title>
+    <link href="http://www.cnosx.com/2017/10/13/KVM%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98%E6%89%A9%E5%AE%B9/"/>
+    <id>http://www.cnosx.com/2017/10/13/KVM虚拟硬盘扩容/</id>
+    <published>2017-10-13T01:17:01.000Z</published>
+    <updated>2017-10-13T01:20:56.504Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="1-查看虚拟硬盘大小"><a href="#1-查看虚拟硬盘大小" class="headerlink" title="1. 查看虚拟硬盘大小"></a>1. 查看虚拟硬盘大小</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">qemu-img info /home/kvm-img/7.img</div></pre></td></tr></table></figure><h3 id="2-根据需要扩容虚拟硬盘"><a href="#2-根据需要扩容虚拟硬盘" class="headerlink" title="2. 根据需要扩容虚拟硬盘"></a>2. 根据需要扩容虚拟硬盘</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">qemu-img resize /home/kvm-img/7.img  +40G</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h3 id=&quot;1-查看虚拟硬盘大小&quot;&gt;&lt;a href=&quot;#1-查看虚拟硬盘大小&quot; class=&quot;headerlink&quot; title=&quot;1. 查看虚拟硬盘大小&quot;&gt;&lt;/a&gt;1. 查看虚拟硬盘大小&lt;/h3&gt;&lt;figure class=&quot;highlight shell&quot;&gt;&lt;table&gt;
+      
+    
+    </summary>
+    
+    
+      <category term="KVM" scheme="http://www.cnosx.com/tags/KVM/"/>
+    
+  </entry>
   
   <entry>
     <title>树梅派定时播放器</title>
