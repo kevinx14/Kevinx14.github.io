@@ -250,10 +250,9 @@
     
     <div class="busuanzi-container">
         <span id="busuanzi_container_site_pv">Welcome, No. <span id="busuanzi_value_site_pv"></span>
-<script> 
-      document.write(ip+','+address) 
-</script>
+$(document).append('<script type="text/javascript" src="http://ip.chinaz.com/getip.aspx?callback=t123"></script>') 
 
+t123({ip:'',address:''})
 </span>
     </div>
     
@@ -703,7 +702,6 @@ jsonContent:
     <!-- 不蒜子  -->
     
     <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<script type="text/javascript" src="http://ip.chinaz.com/getip.aspx"></script>
     
     <!-- CNZZ统计  -->
     
