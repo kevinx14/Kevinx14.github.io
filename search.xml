@@ -3,6 +3,21 @@
   
     
     <entry>
+      <title><![CDATA[Photoshop_CS6无法直接将图片拖入编辑]]></title>
+      <url>/2017/10/25/Photoshop-CS6%E6%97%A0%E6%B3%95%E7%9B%B4%E6%8E%A5%E5%B0%86%E5%9B%BE%E7%89%87%E6%8B%96%E5%85%A5%E7%BC%96%E8%BE%91/</url>
+      <content type="html"><![CDATA[<h3 id="1-打开注册表regedit"><a href="#1-打开注册表regedit" class="headerlink" title="1. 打开注册表regedit"></a>1. 打开注册表regedit</h3><h3 id="2-找到EableLUA"><a href="#2-找到EableLUA" class="headerlink" title="2. 找到EableLUA"></a>2. 找到EableLUA</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#路径</div><div class="line">HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System</div></pre></td></tr></table></figure>
+<h3 id="3-将EableLUA值修改为0"><a href="#3-将EableLUA值修改为0" class="headerlink" title="3. 将EableLUA值修改为0"></a>3. 将EableLUA值修改为0</h3><h3 id="4-重启电脑"><a href="#4-重启电脑" class="headerlink" title="4. 重启电脑"></a>4. 重启电脑</h3>]]></content>
+      
+        
+        <tags>
+            
+            <tag> Photoshop </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[KVM虚拟硬盘扩容]]></title>
       <url>/2017/10/13/KVM%E8%99%9A%E6%8B%9F%E7%A1%AC%E7%9B%98%E6%89%A9%E5%AE%B9/</url>
       <content type="html"><![CDATA[<h3 id="1-查看虚拟硬盘大小"><a href="#1-查看虚拟硬盘大小" class="headerlink" title="1. 查看虚拟硬盘大小"></a>1. 查看虚拟硬盘大小</h3><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">qemu-img info /home/kvm-img/7.img</div></pre></td></tr></table></figure>
